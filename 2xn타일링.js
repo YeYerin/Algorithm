@@ -1,6 +1,6 @@
 
 /*
-시간초과
+시간초과 : 재귀는 느리다.
 
 function solution(n) {
     let answer = 0;
@@ -14,20 +14,15 @@ function solution(n) {
 
 */
 
-/*
-오류검출
 
+// 결과는 맞으나 시간,공간 초과
 function solution(n) {
-    let answer = 1;
-    //피보나치
-    if(n<3) answer = n;
-    else
-        for(let i=1;i<n-1;i++){
-            let a = answer;
-            answer += a;
-        }
+    let a=1;    let b=1;    let t;
     
-    return answer;
+    for(let i=0;i<n-1;i++){
+        t = a+b;
+        a = b;
+        b = t;
+    }
+    return t;
 }
-
-*/
