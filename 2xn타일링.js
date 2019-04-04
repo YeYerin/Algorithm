@@ -15,7 +15,9 @@ function solution(n) {
 */
 
 
-// 결과는 맞으나 시간,공간 초과
+/*
+ 결과는 맞으나 시간,공간 초과
+
 function solution(n) {
     let a=1;    let b=1;    let t;
     
@@ -25,4 +27,17 @@ function solution(n) {
         b = t;
     }
     return t;
+}
+
+*/
+
+// 배열로 풀기!
+function solution(n) {
+    let answer= [1,2,];
+
+    for(let i=2;i<n;i++){
+        answer[i] = answer[i-2] + answer[i-1];
+    }
+
+    return answer[n-1];
 }
