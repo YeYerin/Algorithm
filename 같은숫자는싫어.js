@@ -2,7 +2,7 @@ function solution(arr)
 {
     var answer = [];
 
-    for(let i=0;i<arr.length;i++){
+    for(let i in arr){
         if(arr[i] !== answer[answer.length-1])
             answer.push(arr[i]);
     }
