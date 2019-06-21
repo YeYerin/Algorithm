@@ -1,4 +1,4 @@
-
+/* 효율성 실패
 function solution(n) {
 
     let answer = 0;
@@ -17,4 +17,19 @@ function solution(n) {
 }
 
 
+*/
 
+function solution(n) {
+
+    let answer = 1; 
+    if ( n == 2 ) answer = 1; 
+    else { 
+        for ( let i = 3; i <= n; i++ ) { 
+            let thtn = false; 
+            for ( let j = 2; j < i; j++) { 
+                if ( i % j != 0 ) thtn = true;  
+                else {thtn = false; break; }
+            } 
+            if (thtn) answer++;
+    return answer;
+}
